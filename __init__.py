@@ -40,7 +40,7 @@ import supybot.world as world
 __version__ = ""
 
 # XXX Replace this with an appropriate author or supybot.Author instance.
-__author__ = supybot.Author("Thomas Lake", "tswsl1989", "tswsl1989@sucs.org")
+__author__ = supybot.Author("Thomas Lake", "tswsl1989", "tom@leftdiodes.co.uk")
 
 # This is a dictionary mapping supybot.Author instances to lists of
 # contributions.
@@ -49,10 +49,12 @@ __contributors__ = {}
 # This is a url where the most recent plugin package can be downloaded.
 __url__ = '' # 'http://supybot.com/Members/yourname/Definitions/download'
 
-import config
-import plugin
 import sqlite3
 import datetime
+
+from . import config
+from . import plugin
+from importlib import reload
 
 reload(datetime)
 reload(sqlite3)
